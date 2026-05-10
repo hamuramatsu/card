@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Mother's Day 💕</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="main.js" defer></script>
+</head>
+<body>
+
+<!-- SCENE 1: Machine -->
+<div id="scene-machine">
+  <div class="machine-wrap" id="bear-machine-wrap">
+
+    <img class="machine-img" src="photos/mother.png" alt="Card machine" />
+
+    <!-- Paper strip comes out of slot -->
+    <div id="paper-strip">
+      <div class="strip-text" id="strip-text">
+       TO: MOMMY<br><br>
+       LOVE: HALEY
+      </div>
+    </div>
+
+  </div>
+
+  <button class="print-btn" id="print-btn" onclick="startPrinting()">click me &lt;3</button>
+
+  <div id="home-btns">
+    <div class="home-btn-row">
+      <button class="btn-secondary" onclick="openCard()">open card</button>
+      <button class="btn-primary" onclick="openGallery()">view photos</button>
+    </div>
+  </div>
+</div>
+
+<!-- SCENE 2: Card -->
+<div id="scene-card">
+  <div class="card-wrap">
+    <button class="close-card-btn" onclick="closeCard()" title="Close card">✕</button>
+    <div class="card-inner" id="card-inner">
+      <div class="card-body">
+
+        <div class="card-top">
+          <span class="card-top-deco">🌸🐻🌸</span>
+          <div class="card-title">Happy Mother's Day Mommy</div>
+        </div>
+
+        <div class="card-video-area" id="card-video-area">
+          <video src="photos/vid.mp4" autoplay muted loop style="width:100%;height:100%;object-fit:cover;display:block;"></video>
+        </div>
+
+        <div class="card-message-area" id="card-message-area">
+          <div class="card-divider"></div>
+          <p class="card-message">
+            <strong>♥︎♥︎♥︎</strong><br>
+            Thank you for eveything you do for me. I love you and I miss you.
+          </p>
+          <div class="card-divider"></div>
+          <p class="card-signature">Love, Haley</p>
+        </div>
+
+        <div class="card-bottom-row" id="card-bottom-row">
+          <!-- <button class="btn-secondary" onclick="closeCard()">✕ close</button> -->
+          <button class="btn-primary" onclick="closeCardAndGallery()">→</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SCENE 3: Gallery -->
+<div id="scene-gallery">
+  <div class="gallery-title">🌸🐻🌸</div>
+
+  <div class="carousel-wrap">
+    <div class="carousel-track" id="carousel-track">
+      <!-- Slides injected by JS -->
+    </div>
+    <button class="carousel-btn prev-btn" onclick="carouselPrev()">‹</button>
+    <button class="carousel-btn next-btn" onclick="carouselNext()">›</button>
+  </div>
+
+  <div class="carousel-dots" id="carousel-dots"></div>
+
+  <div class="gallery-actions">
+    <button class="btn-ghost" onclick="closeGallery()">x close</button>
+    <button class="btn-ghost" onclick="openCardFromGallery()">view card</button>
+  </div>
+</div>
+
+</body>
+</html>
